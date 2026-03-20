@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Place your custom meal prep order with RiverSolJax."/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://jossuarivera.github.io/RiverSoljax-web1-final-test/images/RIVERSOLJAX_logo.png">
+<meta property="og:url" content="https://jossuarivera.github.io/RiverSoljax-web1-final-test/">
+<link rel="stylesheet" href="style_order.css"/>
+<title>RiverSolJax - Place Your Order</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+<nav class="navigation_bar">
+<a href="index.html">
+<img src="images/RIVERSOLJAX-WEB_PAGE_logo.png" alt="RiverSolJax logo"/>
+</a>
+</nav>
+</header>
+
+<!-- MAIN ORDER FORM -->
+<main class="order_form">
+<div class="place_order_title">
+<h1 id="planTitle">Plan Name</h1>
+<p id="planDescription">Plan description and prices will appear here.</p>
+</div>
+
+<!-- Meal Count Modal -->
+<div id="mealCountModal" class="modal">
+<div class="modal-content">
+<h2>Select Number of Meals</h2>
+<button class="mealCountBtn" data-meals="5">5 Meals</button>
+<button class="mealCountBtn" data-meals="10">10 Meals</button>
+</div>
+</div>
+
+<!-- Combination Modal -->
+<div id="combinationModal" class="modal">
+<div class="modal-content">
+<h2>Select Combination Type</h2>
+<button class="comboBtn" data-combo="1">1 Combination</button>
+<button class="comboBtn" data-combo="2">2 Combinations</button>
+</div>
+</div>
+
+<form class="content_of_form" id="orderForm">
+
+<h2 id="comboTitle"></h2>
+
+<!-- Protein -->
+<fieldset id="proteinField">
+<legend>Protein (Select 1)</legend>
+<div class="option"><input type="radio" name="Protein" value="Chicken" id="chicken"/><label for="chicken">Grilled Chicken</label><span class="extra-price">+$0</span></div>
+<div class="option"><input type="radio" name="Protein" value="Ground Turkey" id="ground_turkey"/><label for="ground_turkey">Ground Turkey</label><span class="extra-price">+$0</span></div>
+<div class="option"><input type="radio" name="Protein" value="Breast Turkey" id="breast_turkey"/><label for="breast_turkey">Breast Turkey</label><span class="extra-price">+$0</span></div>
+<div class="option"><input type="radio" name="Protein" value="Steak" id="steak"/><label for="steak">Steak</label><span class="extra-price">+$3.50</span></div>
+<div class="option"><input type="radio" name="Protein" value="Shrimp" id="shrimp"/><label for="shrimp">Grilled Shrimp</label><span class="extra-price">+$2.00</span></div>
+<div class="option"><input type="radio" name="Protein" value="Salmon" id="salmon"/><label for="salmon">Salmon</label><span class="extra-price">+$3.50</span></div>
+<div class="option"><input type="radio" name="Protein" value="Bison" id="bison"/><label for="bison">Bison</label><span class="extra-price">+$2.00</span></div>
+<div class="option"><input type="radio" name="Protein" value="Carnitas" id="carnitas"/><label for="carnitas">Carnitas</label><span class="extra-price">+$2.00</span></div>
+</fieldset>
+
+<!-- Vegetables -->
+<fieldset id="veggiesField">
+<legend>Vegetables (Select up to 3)</legend>
+<div class="option"><input type="checkbox" name="Vegetables" value="Broccoli" id="broccoli"/><label for="broccoli">Broccoli</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Zucchini" id="zucchini"/><label for="zucchini">Zucchini</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Green Beans" id="green_beans"/><label for="green_beans">Green Beans</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Cabbage" id="cabbage"/><label for="cabbage">Cabbage</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Asparagus" id="asparagus"/><label for="asparagus">Asparagus</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Lettuce" id="lettuce"/><label for="lettuce">Lettuce</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Tomatoes" id="tomatoes"/><label for="tomatoes">Tomatoes</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Cucumber" id="cucumber"/><label for="cucumber">Cucumber</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Mushrooms" id="mushrooms"/><label for="mushrooms">Mushrooms</label></div>
+<div class="option"><input type="checkbox" name="Vegetables" value="Carrots" id="carrots"/><label for="carrots">Carrots</label></div>
+</fieldset>
+
+<!-- Carbs -->
+<fieldset id="carbsField">
+<legend>Carbohydrates (Optional)</legend>
+<div class="option"><input type="radio" name="Carbohydrates" value="White Rice" id="w_rice"/><label for="w_rice">White Rice</label></div>
+<div class="option"><input type="radio" name="Carbohydrates" value="Brown Rice" id="b_rice"/><label for="b_rice">Brown Rice</label></div>
+<div class="option"><input type="radio" name="Carbohydrates" value="Sweet Potato" id="sweet_potato"/><label for="sweet_potato">Sweet Potato</label></div>
+<div class="option"><input type="radio" name="Carbohydrates" value="Quinoa" id="quinoa"/><label for="quinoa">Quinoa</label></div>
+<div class="option"><input type="radio" name="Carbohydrates" value="Coliflor Rice" id="coliflor_rice"/><label for="coliflor_rice">Coliflor Rice</label></div>
+</fieldset>
+
+<!-- Extras -->
+<fieldset id="extrasField">
+<legend>Extras (Select up to 2)</legend>
+<div class="option"><input type="checkbox" name="Extras" value="Avocado" id="avocado"/><label for="avocado">Avocado</label><span>+$1.50</span></div>
+<div class="option"><input type="checkbox" name="Extras" value="Egg" id="egg"/><label for="egg">Egg</label><span>+$1.50</span></div>
+</fieldset>
+
+<div class="form-buttons">
+<button type="button" id="nextBtn">Next</button>
+<button type="button" id="checkoutBtn">Checkout</button>
+</div>
+
+</form>
+</main>
+
+<footer class="footer">
+<img src="images/RIVERSOLJAX-WEB_PAGE_logo.png" alt="RiverSoljax logo"/>
+<p>&#169;RiverSolJax</p>
+<p>RiverSolJax does not use flours, artificial preservatives, inflammatory oils, or products high in sodium.</p>
+</footer>
+
+<script src="script_order.js"></script>
+</body>
+</html>

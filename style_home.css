@@ -1,0 +1,107 @@
+/* RESET & BASE */
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f5f7fa;color:#222;line-height:1.6;text-align:center;}
+img{max-width:100%;height:auto;display:block;}
+
+/* HEADER */
+.index_header{position:relative;background-image:url("images/background_one.png");background-size:cover;background-position:center;min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.index_header::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35);}
+#riversoljax_logo{position:relative;z-index:2;max-width:420px;margin-top:3rem;}
+#riversoljax_slogan{position:relative;z-index:2;max-width:600px;margin-top:1rem;}
+
+/* SECTIONS */
+section{max-width:1100px;margin:auto;padding:4rem 2rem;}
+section h1{font-size:2.5rem;margin-bottom:1rem;}
+section h2{font-size:2rem;margin-bottom:1rem;}
+main section:first-of-type p{max-width:700px;margin:auto;font-size:1.1rem;}
+
+/* MEAL PREP */
+.meal_prep_section{background:white;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.08);}
+.meal_prep_layout{display:flex;align-items:flex-start;justify-content:center;gap:3rem;flex-wrap:wrap;margin-top:2rem;}
+.meal_prep_layout p{max-width:450px;font-size:1.1rem;line-height:1.7;text-align:left;}
+.meal_prep_layout figure{max-width:520px;margin:0;}
+.meal_prep_layout img{border-radius:10px;box-shadow:0 12px 30px rgba(0,0,0,.18);}
+
+/* PLAN TITLE */
+.order_page_title{background:#90EE90;color:#222;border-radius:12px;padding:3rem 2rem;margin-top:3rem;box-shadow:0 10px 25px rgba(0,0,0,.08);}
+.order_page_title h2{font-size:3rem;margin-bottom:1rem;}
+.order_page_title p{max-width:700px;margin:auto;color:#222;}
+
+/* PLAN CARDS */
+.select_your_meal_plan{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-top:2rem;}
+.meal_card{background:white;padding:2rem;border-radius:12px;flex:1 1 220px;min-width:220px;max-width:250px;text-decoration:none;color:#222;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:transform .25s ease,box-shadow .25s ease;cursor:pointer;}
+.meal_card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.15);}
+.select_your_meal_plan h3{font-size:1.5rem;margin-bottom:.7rem;}
+.select_your_meal_plan p{margin:.4rem 0;}
+
+/* MODALS */
+.modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.5);animation:fadeIn .3s;}
+.modal-content{background-color:white;margin:10% auto;padding:2rem;border-radius:12px;width:90%;max-width:400px;text-align:center;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.2);transform:translateY(-20px);opacity:0;animation:slideDown 0.3s forwards;}
+
+/* INPUTS */
+.inputField{width:100%;padding:.7rem;margin-top:.7rem;border:1px solid #ccc;border-radius:6px;font-family:'Inter',sans-serif;}
+
+/* BUTTONS */
+#submitUpload, #doneInfo, #agreeBtn{background:#90EE90;border:none;padding:.7rem 1.5rem;border-radius:6px;font-weight:600;cursor:not-allowed;margin-top:1rem;color: black;}
+#submitUpload:enabled, #doneInfo:enabled, #agreeBtn:enabled{cursor:pointer;}
+
+/* FILE LABEL */
+.custom-file-upload input[type="file"]{display:none;}
+#fileLabel{display:inline-block;padding:.7rem 1.5rem;background:#ececec;color:#222;border-radius:6px;cursor:pointer;font-weight:500;margin-top:1rem;transition:opacity .2s;}
+#fileLabel:hover{opacity:.8;}
+
+/* CONTACT OPTIONS */
+.contactOptions{display:flex;gap:1rem;justify-content:center;margin-top:1rem;flex-wrap:wrap;}
+.contactOption{background:#ececec;border:none;padding:.6rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:500;flex:1 1 100px; color: black;}
+.contactOption:hover{background:#90EE90;}
+
+/* CLOSE BUTTON */
+.closeModal{position:absolute;top:10px;right:12px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:#444;}
+
+.closeModal:hover{
+opacity:.6;
+}
+
+/* FOOTER */
+.index_footer{display:flex;flex-direction:column;align-items:center;background:#90EE90;padding:2rem;margin-top:3rem;}
+.index_footer img{max-width:200px;margin-bottom:.5rem;}
+.index_footer p{font-weight:500;}
+
+/* ANIMATIONS */
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes slideDown{from{transform:translateY(-20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+
+/* MOBILE */
+@media(max-width:768px){
+#riversoljax_logo{max-width:260px;margin-top:2rem;}
+#riversoljax_slogan{max-width:320px;}
+.meal_prep_layout{flex-direction:column;align-items:center;}
+.select_your_meal_plan{flex-direction:column;align-items:center;}
+.order_page_title h2{font-size:2rem;}
+
+/* MODALS */
+.modal{display:none;position:fixed;z-index:999;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.5);animation:fadeIn .3s;}
+.modal-content{background-color:white;margin:10% auto;padding:2rem;border-radius:12px;width:90%;max-width:400px;text-align:center;position:relative;box-shadow:0 10px 30px rgba(0,0,0,.2);transform:translateY(-20px);opacity:0;animation:slideDown 0.3s forwards;}
+
+/* INPUTS */
+.inputField{width:100%;padding:.7rem;margin-top:.7rem;border:1px solid #ccc;border-radius:6px;font-family:'Inter',sans-serif;}
+
+/* BUTTONS */
+#submitUpload, #doneInfo, #agreeBtn{background:#90EE90;border:none;padding:.7rem 1.5rem;border-radius:6px;font-weight:600;cursor:not-allowed;margin-top:1rem;color: black;}
+#submitUpload:enabled, #doneInfo:enabled, #agreeBtn:enabled{cursor:pointer;}
+
+/* FILE LABEL */
+.custom-file-upload input[type="file"]{display:none;}
+#fileLabel{display:inline-block;padding:.7rem 1.5rem;background:#ececec;color:#222;border-radius:6px;cursor:pointer;font-weight:500;margin-top:1rem;transition:opacity .2s;}
+#fileLabel:hover{opacity:.8;}
+
+/* CONTACT OPTIONS */
+.contactOptions{display:flex;gap:1rem;justify-content:center;margin-top:1rem;flex-wrap:wrap;}
+.contactOption{background:#ececec;border:none;padding:.6rem 1.2rem;border-radius:6px;cursor:pointer;font-weight:500;flex:1 1 100px;color: black;}
+.contactOption:hover{background:#90EE90;}
+
+/* MOBILE INPUT ZOOM FIX */
+input, select, textarea{
+font-size:16px;
+}
+}

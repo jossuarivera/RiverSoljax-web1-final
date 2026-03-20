@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RiverSolJax Order Manager</title>
+
+<!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-app-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.24.0/firebase-auth-compat.js"></script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- LOGIN OVERLAY -->
+<div id="login-overlay">
+  <div id="login-box">
+    <h2>Staff Login</h2>
+    
+    <input type="email" id="login-email" placeholder="Email">
+    <input type="password" id="login-password" placeholder="Password">
+    
+    <button id="login-btn">Login</button>
+    
+    <p id="login-error" style="color:red;"></p>
+  </div>
+</div>
+
+<!-- PC Layout -->
+<div id="main">
+  <div class="column" id="new-orders">
+    <h2>New Orders</h2>
+    <input type="text" class="search" placeholder="Search" id="search-new">
+    <div id="new-list"></div>
+  </div>
+
+  <div class="column" id="not-ready-orders">
+    <h2>Not Ready</h2>
+    <input type="text" class="search" placeholder="Search" id="search-notready">
+    <button type="button" id="print-notready-btn">Print</button>
+    <div id="notready-list"></div>
+  </div>
+
+  <div class="column" id="completed-orders">
+    <h2>Completed</h2>
+    <input type="text" class="search" placeholder="Search" id="search-completed">
+    <div id="completed-list"></div>
+  </div>
+
+  <div id="ticket-viewer">
+    <h2>Ticket Viewer</h2>
+    <button type="button" id="print-ticket-btn">Print Ticket</button>
+    <div id="ticket-list"></div>
+  </div>
+
+  <div id="week-product">
+    <h2>This Week's Product</h2>
+    <button type="button" id="print-week-btn">Print Product</button>
+    <div id="week-list"></div>
+  </div>
+</div>
+
+<!-- Mobile-only elements -->
+<div id="mobile-container"></div>
+
+<script type="module" src="./firebase_config.js"></script>
+<script type="module" src="./pc_script.js"></script>
+<script type="module" src="./mobile_script.js"></script>
+<script type="module" src="./auth.js"></script>
+</body>
+</html>
